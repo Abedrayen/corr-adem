@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+
+header {
+    border: 1px solid black;
+}
+
+
+.navbar {
+    display: flex;
+    align-items: center;
+    background-color: rgb(2, 2, 72);
+    padding: 0px 20px;
+    flex-wrap: wrap; /* nestaamlou wrap besh les elements yarj3ou lestar ki ykoun escreen sghir */
+}
+
+.navbar .logo {
+    margin-right: auto;
+}
+
+.navbar .logo img {
+    height: 120px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    font-family: "Quicksand", sans-serif;
+    align-items: center;
+    font-size: 25px;
+    flex-wrap: wrap; /* nestaamlou wrap besh les elements yarj3ou lestar ki ykoun escreen sghir */
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+/* Intro section styling */
+.intro {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    font-size: 3.3rem;
+    border: 1px solid;
+    margin-top: 0px;
+    background: url(aa.jpg);
+    background-size: cover;
+    height: 22rem;
+    padding-top: 13%;
+    padding-left: 20px; /* dima nestaamlou padding lel box eli fih lektiba moush lel ktiba bidha */
+}
+
+.intro p {
+    font-family: "Quicksand", sans-serif;
+    font-weight: 900;
+    color: aliceblue;
+    display: flex;
+    position: relative;
+}
+
+span {
+    color: #ffd413;
+}
+
+#no {
+    font-size: 2rem;
+}
+
+button {
+    position: relative;
+    display: inline-block;
+    margin: 15px 3%;
+    padding: 1% 2%;
+    text-align: center;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #ffd413;
+    background: transparent;
+    cursor: pointer;
+    transition: ease-out 0.5s;
+    border: 2px solid #ffd413;
+    border-radius: 10px;
+    font-family: "Quicksand", sans-serif;
+    box-shadow: inset 0 0 0 0 #ffd413;
+}
+
+button:hover {
+    color: white;
+    box-shadow: inset 0 -100px 0 0 #ffd413;
+}
+
+button:active {
+    transform: scale(0.9);
+}
+
+
+article {
+    background-color: rgb(2, 2, 72);
+    padding: 20px; /* padding fel boxs wel containers mouhem barsha */
+}
+
+.p1 {
+    color: #ffd413;
+    font-size: 2.5rem;
+    justify-content: center;
+    display: flex;
+    font-family: "Quicksand", sans-serif;
+    font-weight: bold;
+}
+
+.p2 {
+    color: #ffffff;
+    font-size: 2rem;
+    justify-content: center;
+    display: flex;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 900;
+}
+
+
+#a, #b, #c {
+    width: 70%;
+    max-width: 100%; /* dima nestaamlou max-width besh n9oulou eli l 3oredh maximum teaa etaswira mayfoutesh l3oredh teaa l container eli hya fih*/
+}
+
+
+.bossbox {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-family: "Quicksand", sans-serif;
+    font-size: 1.9rem;
+    color: aliceblue;
+    margin: 2vh;
+    padding: 2vh;
+    flex-wrap: wrap; /*nestaamlou wrap klaada */
+}
+
+
+.box1, .box2, .box3 {
+    border: 1px solid rgba(0, 0, 0, 0);
+    width: 32%;
+    height: auto; /* nestaamlou l height auto besh ykoun flexible wdynamic */
+    padding: 0 5vh;
+    margin-bottom: 20px; /* nestaamlou margin bottom besh les boxes yodekhloush fi baadhhom fscreen esghar  */
+    display: flex;
+    flex-direction: column;
+}
+
+.box1 img, .box2 img, .box3 img {
+    border-radius: 10px;
+    height: auto; 
+    max-height: 26vh;
+}
+
+/* tw netaadou l aham partie eli hya l media query nakhtar deux walla trois largeurs standards wfi west kol media query nekteb 9adeh nheb les tailles teaa lektiba walla tailles teaa les elements yetbadlou */
+
+@media (max-width: 1200px) {
+    .navbar ul {
+        font-size: 20px; 
+    }
+    .intro {
+        font-size: 2.5rem; 
+        height: auto; 
+    }
+    .p1 {
+        font-size: 2rem; 
+    }
+    .p2 {
+        font-size: 1.5rem; 
+    }
+    .bossbox {
+        flex-direction: column; 
+    }
+    .box1, .box2, .box3 {
+        width: 100%; 
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar ul {
+        font-size: 18px; 
+    }
+    .intro {
+        font-size: 2rem; 
+        height: auto; 
+    }
+    .p1 {
+        font-size: 1.5rem; 
+    }
+    .p2 {
+        font-size: 1.2rem; 
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar ul {
+        flex-direction: column; 
+        font-size: 16px; 
+        align-items: flex-start; 
+    }
+    .intro {
+        font-size: 1.5rem; 
+        padding-top: 20px; 
+        padding-left: 10px; 
+    }
+    button {
+        margin: 15px 0; 
+        padding: 1% 5%; 
+    }
+}
